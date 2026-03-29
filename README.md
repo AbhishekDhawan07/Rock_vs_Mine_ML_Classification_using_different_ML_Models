@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🪨 Rock vs Mine — Multi-Model ML Classification
+# 🪨 Rock vs Mine - Multi-Model ML Classification
 
 ### *Sonar Signals. Four Algorithms. One Winner.* 🏆
 
@@ -18,7 +18,7 @@
 
 <br>
 
-> 🌊 *"Not all signals look the same underwater. ML knows the difference between a rock and a mine — and tells you which model does it best."*
+> 🌊 *"Not all signals look the same underwater. ML knows the difference between a rock and a mine - and tells you which model does it best."*
 
 <br>
 
@@ -68,9 +68,9 @@
 ```
 🗂️ Rock_vs_Mine_ML_Classification_using_different_ML_Models/
 │
-├── 📄 README.md                                                  ← at root level
-├── 🖼️ Training Accuracy Comparision of Different Models.png     ← 📊 Bar chart (Training)
-├── 🖼️ Testing Accuracy Comparision of Different Models.png      ← 📊 Bar chart (Testing)
+├── 📄 README.md                                                  <- at root level
+├── 🖼️ Training Accuracy Comparision of Different Models.png     <- 📊 Bar chart (Training)
+├── 🖼️ Testing Accuracy Comparision of Different Models.png      <- 📊 Bar chart (Testing)
 │
 └── 📂 Different ML Models Project - Rock VS Mine Classification/
     │
@@ -84,7 +84,7 @@
 
 ## 🎯 What Is This Project?
 
-This project is a **head-to-head battle of four Machine Learning algorithms** — all trained on real-world sonar signal data — to answer one critical question:
+This project is a **head-to-head battle of four Machine Learning algorithms** - all trained on real-world sonar signal data - to answer one critical question:
 
 ```
 🤔  "Is this underwater object a ROCK 🪨 or a MINE 💣?"
@@ -200,7 +200,7 @@ The **SONAR Dataset** (originally from the UCI Machine Learning Repository) cont
 ## 🧪 Step-by-Step Notebook Breakdown
 
 <details>
-<summary><b>📦 Step 1 — Importing Libraries</b> 🖱️ click to expand</summary>
+<summary><b>📦 Step 1 - Importing Libraries</b> 🖱️ click to expand</summary>
 <br>
 
 ```python
@@ -217,14 +217,14 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 ```
 
-> 🔧 Four classifiers imported from `sklearn` — all trained and evaluated in the same pipeline for a fair, apples-to-apples comparison.
+> 🔧 Four classifiers imported from `sklearn` - all trained and evaluated in the same pipeline for a fair, apples-to-apples comparison.
 
 </details>
 
 ---
 
 <details>
-<summary><b>📥 Step 2 — Loading & Exploring the Dataset</b> 🖱️ click to expand</summary>
+<summary><b>📥 Step 2 - Loading & Exploring the Dataset</b> 🖱️ click to expand</summary>
 <br>
 
 ```python
@@ -241,15 +241,15 @@ sonar_data.iloc[:, 60].value_counts()  # → M: 111 | R: 97
 | Dataset Shape | `(208, 61)` |
 | Missing Values | ✅ Zero |
 | Duplicate Rows | ✅ Zero |
-| Class Balance | 🟡 Slightly imbalanced — 111 Mines vs 97 Rocks |
-| Feature Range | 0.0 – 1.0 (energy values) |
+| Class Balance | 🟡 Slightly imbalanced - 111 Mines vs 97 Rocks |
+| Feature Range | 0.0 - 1.0 (energy values) |
 
 </details>
 
 ---
 
 <details>
-<summary><b>📊 Step 3 — Visualization & EDA</b> 🖱️ click to expand</summary>
+<summary><b>📊 Step 3 - Visualization & EDA</b> 🖱️ click to expand</summary>
 <br>
 
 Four powerful visualizations were generated to understand the data:
@@ -280,7 +280,7 @@ sns.boxplot(data=sonar_data.iloc[:, :-1])
 ---
 
 <details>
-<summary><b>✂️ Step 4 — Feature/Target Split & Train-Test Split</b> 🖱️ click to expand</summary>
+<summary><b>✂️ Step 4 - Feature/Target Split & Train-Test Split</b> 🖱️ click to expand</summary>
 <br>
 
 ```python
@@ -298,8 +298,8 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 ```
 📊 Split Summary
-├── 🏋️  Training Set   →  166 samples  (80%)
-└── 🧪  Testing Set    →   42 samples  (20%)
+├── 🏋️  Training Set   ->  166 samples  (80%)
+└── 🧪  Testing Set    ->   42 samples  (20%)
 ```
 
 </details>
@@ -307,7 +307,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 ---
 
 <details>
-<summary><b>🤖 Step 5–8 — Training All Four Models</b> 🖱️ click to expand</summary>
+<summary><b>🤖 Step 5–8 - Training All Four Models</b> 🖱️ click to expand</summary>
 <br>
 
 Each model was trained, evaluated on both train and test sets, and analyzed for overfitting:
@@ -337,10 +337,10 @@ test_acc  = accuracy_score(y_test,  model.predict(X_test))
 
 ---
 
-## 🤖 Model Deep Dives — Four Algorithms, One Arena
+## 🤖 Model Deep Dives - Four Algorithms, One Arena
 
 <details>
-<summary><b>🔵 Model 1 — Support Vector Machine (SVM)</b> 🖱️ click to expand</summary>
+<summary><b>🔵 Model 1 - Support Vector Machine (SVM)</b> 🖱️ click to expand</summary>
 <br>
 
 ```python
@@ -388,14 +388,14 @@ dt_model = DecisionTreeClassifier(ccp_alpha=0.05, random_state=42)
 
 **💬 Verdict: ❌ → ⚠️ High Overfitting fixed to Manageable**
 - Default Decision Tree memorized the training data completely
-- CCP Pruning trimmed unnecessary branches — trading training perfection for real-world generalization
+- CCP Pruning trimmed unnecessary branches - trading training perfection for real-world generalization
 
 </details>
 
 ---
 
 <details>
-<summary><b>🟢 Model 3 — Logistic Regression</b> 🖱️ click to expand</summary>
+<summary><b>🟢 Model 3 - Logistic Regression</b> 🖱️ click to expand</summary>
 <br>
 
 ```python
