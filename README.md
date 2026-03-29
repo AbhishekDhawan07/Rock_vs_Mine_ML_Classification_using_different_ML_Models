@@ -363,7 +363,7 @@ svm_model = SVC(kernel='linear', random_state=42)
 ---
 
 <details>
-<summary><b>🔴 Model 2 — Decision Tree</b> 🖱️ click to expand</summary>
+<summary><b>🔴 Model 2 - Decision Tree</b> 🖱️ click to expand</summary>
 <br>
 
 **🚨 Before Pruning:**
@@ -386,7 +386,7 @@ dt_model = DecisionTreeClassifier(ccp_alpha=0.05, random_state=42)
 | 🧪 Testing Accuracy | **~69%** |
 | 📉 Gap | Significantly reduced ✅ |
 
-**💬 Verdict: ❌ → ⚠️ High Overfitting fixed to Manageable**
+**💬 Verdict: ❌ -> ⚠️ High Overfitting fixed to Manageable**
 - Default Decision Tree memorized the training data completely
 - CCP Pruning trimmed unnecessary branches - trading training perfection for real-world generalization
 
@@ -409,7 +409,7 @@ lr_model = LogisticRegression(random_state=42, max_iter=1000)
 | 📉 Gap | ~8% |
 
 **💬 Verdict: 🔄 Slightly Underfitting (But Stable)**
-- Training and testing accuracy are very close — excellent generalization
+- Training and testing accuracy are very close - excellent generalization
 - The model is stable and trustworthy, not memorizing data
 - Slight underfitting because sonar signals have complex nonlinear patterns that logistic regression (a linear model) can't fully capture
 
@@ -418,7 +418,7 @@ lr_model = LogisticRegression(random_state=42, max_iter=1000)
 ---
 
 <details>
-<summary><b>🟡 Model 4 — Random Forest 🏆</b> 🖱️ click to expand</summary>
+<summary><b>🟡 Model 4 - Random Forest 🏆</b> 🖱️ click to expand</summary>
 <br>
 
 **Default Configuration:**
@@ -469,9 +469,9 @@ rf_model = RandomForestClassifier(
 └──────────────────┴──────────────┴──────────────┴────────────────────┘
 
 🔧 FIXES APPLIED
-├── 🔴 Decision Tree  →  Cost Complexity Pruning (ccp_alpha=0.05)
-│                         Gap: 38% → significantly reduced ✅
-└── 🟡 Random Forest  →  max_depth=1, max_features=3, max_samples=0.4
+├── 🔴 Decision Tree  ->  Cost Complexity Pruning (ccp_alpha=0.05)
+│                         Gap: 38% -> significantly reduced ✅
+└── 🟡 Random Forest  ->  max_depth=1, max_features=3, max_samples=0.4
                           Ensemble averaging naturally reduces variance ✅
 ```
 
@@ -496,26 +496,26 @@ The following bar charts were generated directly from the notebook, comparing al
 
 > 📌 **Reading the Charts:**
 > - 🔵 **Blue** = SVM &nbsp;&nbsp; 🔴 **Red** = Decision Tree &nbsp;&nbsp; 🟢 **Green** = Logistic Regression &nbsp;&nbsp; 🟡 **Orange** = Random Forest
-> - In the **training** chart, Decision Tree and Random Forest both hit 100% — a red flag for overfitting
-> - In the **testing** chart, Random Forest (orange) edges out all others — confirming it as the winner
+> - In the **training** chart, Decision Tree and Random Forest both hit 100% - a red flag for overfitting
+> - In the **testing** chart, Random Forest (orange) edges out all others - confirming it as the winner
 
 ---
 
-## 🏆 Final Verdict — Which Model Wins?
+## 🏆 Final Verdict - Which Model Wins?
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
 │                                                                     │
-│  🥇  BEST OVERALL MODEL      →  🟡 Random Forest                   │
+│  🥇  BEST OVERALL MODEL      ->  🟡 Random Forest                   │
 │       Reason: Highest testing accuracy (78.57%)                    │
 │                                                                     │
-│  🥈  BEST BALANCED MODEL     →  🟡 Random Forest                   │
+│  🥈  BEST BALANCED MODEL     ->  🟡 Random Forest                   │
 │       Reason: Smallest train-test gap among high performers         │
 │                                                                     │
-│  🥉  MOST STABLE MODEL       →  🟢 Logistic Regression             │
+│  🥉  MOST STABLE MODEL       ->  🟢 Logistic Regression             │
 │       Reason: Consistent, no memorization, reliable baseline        │
 │                                                                     │
-│  ⚠️   MOST OVERFITTING        →  🔴 Decision Tree (before pruning)  │
+│  ⚠️   MOST OVERFITTING        ->  🔴 Decision Tree (before pruning)  │
 │       Reason: 100% train vs 61.9% test — 38% gap                   │
 │                                                                     │
 └─────────────────────────────────────────────────────────────────────┘
@@ -594,15 +594,15 @@ jupyter
 
 <div align="center">
 
-> 🚢 **Naval Defense** — autonomous underwater mine detection to protect vessels
+> 🚢 **Naval Defense** - autonomous underwater mine detection to protect vessels
 >
-> 🤿 **Ocean Exploration** — distinguishing natural rock formations from debris or man-made objects
+> 🤿 **Ocean Exploration** - distinguishing natural rock formations from debris or man-made objects
 >
-> 🛳️ **Autonomous Submarines** — real-time sonar classification for navigation & threat avoidance
+> 🛳️ **Autonomous Submarines** - real-time sonar classification for navigation & threat avoidance
 >
-> 🏗️ **Seabed Mapping** — identifying object types on the ocean floor for geological surveys
+> 🏗️ **Seabed Mapping** - identifying object types on the ocean floor for geological surveys
 >
-> 🔬 **Signal Processing Research** — benchmark dataset for testing new ML classification algorithms
+> 🔬 **Signal Processing Research** - benchmark dataset for testing new ML classification algorithms
 
 </div>
 
@@ -611,23 +611,23 @@ jupyter
 ## 📌 Key Takeaways
 
 ```
-✅  Four ML models trained & compared on the same dataset — fair & rigorous
-✅  208 sonar signal samples, 60 frequency features — real-world complexity
+✅  Four ML models trained & compared on the same dataset - fair & rigorous
+✅  208 sonar signal samples, 60 frequency features - real-world complexity
 ✅  Overfitting diagnosed for every single model with evidence
 ✅  Decision Tree overfitting fixed using Cost Complexity Pruning (CCP)
 ✅  Random Forest regularized using max_depth, max_features, max_samples
-✅  Random Forest wins — highest test accuracy (78.57%) despite overfitting
+✅  Random Forest wins - highest test accuracy (78.57%) despite overfitting
 ✅  Logistic Regression is the most stable and trustworthy linear baseline
 ✅  Color-coded bar charts make accuracy comparisons immediately visual
-✅  All models use random_state=42 — 100% reproducible results
-✅  Final conclusions written after every model — clear, structured insights
+✅  All models use random_state=42 - 100% reproducible results
+✅  Final conclusions written after every model - clear, structured insights
 ```
 
 ---
 
 ## 📜 License
 
-Distributed under the **MIT License** — see [`LICENSE`](LICENSE) for details.
+Distributed under the **MIT License** - see [`LICENSE`](LICENSE) for details.
 
 ---
 
